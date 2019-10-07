@@ -1,0 +1,37 @@
+.contacts-form{
+	background: $gray;
+	padding-bottom: 60px;
+}
+
+.contacts-form__wrapper{
+	max-width: calc(100% - 40px);
+	width: 1170px;
+	padding: 1px 0;
+	margin: 0 auto;
+
+}
+
+.contacts-form__form{
+	background: $lightGray;
+	padding: 30px;
+	border-radius: 30px;
+	max-width: 830px;
+}
+
+.contacts-form__cotnent{
+	margin-top: -60px;
+}
+
+.contacts-form__btn-block{
+	padding-top: 15px;
+}
+
+@media screen and (min-width: 768px){
+	.contacts-form__form{
+		padding: 56px 110px;
+	}
+
+	.contacts-form__btn-block{
+		max-width: 270px;
+	}
+}

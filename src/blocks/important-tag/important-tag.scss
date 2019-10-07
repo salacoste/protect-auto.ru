@@ -1,0 +1,27 @@
+.important-tag{
+	border: 3px solid $mainColor;
+	display: inline-block;
+	text-align: left;
+	padding: 12px 30px;
+	border-radius: 30px;
+	margin: 0 0 10px;
+}
+
+.important-tag__title{
+	color: inherit;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 0 5px;
+}
+
+.important-tag__value{
+	font-size: 32px;
+	line-height: 46px;
+	font-weight: 700;
+}
+
+@media screen and (min-width: 350px){
+	.important-tag__value{
+		font-size: 42px;
+	}
+}

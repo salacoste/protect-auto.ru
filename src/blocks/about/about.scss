@@ -1,0 +1,162 @@
+.about{
+	padding: 15px 0 70px;
+	&:before{
+		content: "";
+		display: block;
+		margin: 0 auto 8px;
+		width: 6px;
+		height: 36px;
+		background: #5478E9;
+		border-radius: 3px;
+		transform: rotate(32deg);
+	}
+}
+
+
+.about__wrapper{
+	max-width: 1170px;
+	width: calc(100% - 40px);
+	margin: 0 auto;
+}
+
+
+.about__subtitle{
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0 0 20px;
+}
+
+
+.about__item{
+	margin: 0 0 30px;
+	display: block;
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	&:hover{
+		text-decoration: none;
+		.about__item-arrow{
+			background: $mainColorDarken;
+		}
+	}
+}
+
+
+.about__item-content{
+	border-radius: 30px;
+	background: $lightGray;
+	padding: 40px 30px 80px;
+}
+
+.about__item-img{
+	padding-top: 140px / (300px / 100%);
+	position: relative;
+	border-radius: 30px;
+	overflow: hidden;
+	margin: -70px 10px 0;
+	img{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		object-fit: cover;
+
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+.about__item-arrow-block{
+	position: absolute;
+	padding-top: 140px / (300px / 100%);
+	bottom: 0;
+	right: 0;
+}
+
+
+.about__item-arrow{
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	right: 43px;
+	margin: auto;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: $mainColor;
+	z-index: 1;
+	transition: all .2s ease-in;
+	svg{
+		position: absolute;
+		width: 37%;
+		height: 37%;
+		transform: rotate(-90deg);
+		fill: $white;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto;
+	}
+}
+
+
+@media screen and (min-width: 768px){
+	.about__item{
+		display: flex;
+	}
+
+	.about__item-content{
+		width: 300px;
+		height: 320px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 20px 65px 20px 30px  
+	}
+	.about__item-img{
+		padding-top: 0;
+		height: 320px;
+		margin: 0;
+		width: calc(100% - 300px)
+	}
+
+
+	.about__item-arrow-block{
+		position: absolute;
+		padding-top: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+	
+	
+	.about__item-arrow{
+		width: 60px;
+		height: 60px;
+		right: -30px;
+	}
+}
+
+
+
+@media screen and (min-width: 1260px){
+	.about__item-content{
+		width: 370px;
+	}
+
+	.about__item-img{
+		width: calc(100% - 370px)
+	}
+
+	.about__subtitle{
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+
+
+}

@@ -1,0 +1,165 @@
+.expluatation{
+	background: $dark;
+	color: $white;
+	padding: 135px  0 90px;
+	margin-top: -90px;
+	&::before{
+		content: "";
+		display: block;
+		margin: 0 auto 8px;
+		width: 6px;
+		height: 36px;
+		background: $mainColor;
+		border-radius: 3px;
+		transform: rotate(32deg);
+	}
+	&_no-transform{
+		margin-top: 0;
+	}
+}
+
+.expluatation__wrapper{
+	max-width: 1170px;
+	width: calc(100% - 40px);
+	margin: 0 auto;
+}
+
+
+
+
+.expluatation__item{
+	display: block;
+	margin: 0 0 50px;
+}
+
+.expluatation__img-block{
+	margin: 0 0 25px;
+}
+
+.expluatation__item-img{
+	position: relative;
+	background: $gray;
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 30px;
+	overflow: hidden;
+	img{
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.expluatation__item-content{
+	text-align: left;
+	position: relative;
+	padding-left: 60px;
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+		background: $gray;
+		border-radius: 50%;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+
+.expluatation__item-text{
+	font-size: 16px;
+	line-height: 20px;
+}
+@media screen and (min-width: 768px){
+
+	.expluatation__item{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 700px;
+		margin: 0 auto 35px;
+	}
+
+
+	.expluatation__img-block{
+		width: 360px;
+		margin: 0;
+	}
+
+	.expluatation__item-content{
+		width: calc(100% - 385px);
+	}
+
+
+
+	.expluatation__item-img{
+		padding-top: 325px / (360px / 100%);
+	}
+
+
+}
+
+
+
+@media screen and (min-width: 1260px){
+	.expluatation__item{
+		max-width: 100%;
+	}
+	.expluatation{
+		padding-bottom: 400px - 35px;
+
+		&_no-transform{
+			padding-bottom: 120px;
+		}
+	}
+
+	.expluatation__title-block{
+		margin-bottom: 55px;
+	}
+	.expluatation__img-block{
+		width: 670px;
+	}
+
+	.expluatation__item-img{
+		padding-top: 320px / (670px / 100%);
+	}
+
+	.expluatation__item-text{
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.expluatation__item-content{
+		width: calc(100% - 700px);
+		padding-left: 100px;
+		&::before{
+			height: 65px;
+			width: 65px
+		}
+	}
+
+	.expluatation__item{
+		&_reverse{
+			flex-direction: row-reverse;
+			.expluatation__item-content{
+				padding-left: 0;
+				padding-right: 100px;
+				&::before{
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+
+	}
+}

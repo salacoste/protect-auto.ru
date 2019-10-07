@@ -1,0 +1,31 @@
+.social{
+	margin: 0;
+	padding: 0;
+	li{
+		display: block;
+		margin: 0 0 10px;
+		a{
+			display: block;
+			width: 60px;
+			height: 60px;
+			background: $social;
+			position: relative;
+			border-radius: 20px;
+			transition: all .2s ease-in;
+			&:hover{
+				background: $mainColor;
+			}
+			svg{
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 20px;
+				height: 20px;
+				margin: auto;
+				fill: $white;
+			}
+		}
+	}
+}

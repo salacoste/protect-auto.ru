@@ -1,0 +1,60 @@
+.modal{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	padding: 50px 0;
+	text-align: center;
+	z-index: 10;
+	&::before{
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+.modal__backing{
+	background: rgba(0, 0, 0, .7);
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+
+}
+
+.modal__content{
+	width: 700px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	padding: 30px 50px;
+	background: $white;
+	max-width: calc(100% - 40px);
+	text-align: left;
+	&_video{
+		padding: 0;
+	}
+}
+
+.modal__video{
+	padding-top: 56.25%;
+	position: relative;
+	overflow: hidden;
+	iframe{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+	}
+}

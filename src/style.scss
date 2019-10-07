@@ -1,0 +1,147 @@
+
+
+
+$Circe: "Circe","Roboto", "Open sans", sans-serif;
+
+
+$mainColor: #5478E9;
+$mainColorDarken: #415EB8;
+
+$gray: #515465;
+$darkGray: #979797;
+$lightGray: #F7F7FA;
+$dark: #363745;
+
+$lightGrayBg: #E3E3F0;
+
+$social: #444756;
+
+$white: #FFF;
+$textColor: #000;
+
+
+@import "includes/fonts.scss";
+@import "includes/scrollbar.scss";
+
+
+
+.lazy{
+	opacity: 0;
+	transition: all .2s ease-in;
+	&.loaded{
+		opacity: 1;
+	}
+}
+
+.owl-stage{
+	display: flex;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main{
+	display: block;
+	overflow: hidden;
+}
+
+button, input[type="submit"]{
+	cursor: pointer;
+	border: none;
+}
+
+
+
+
+.text{
+	&_center{
+		text-align: center
+	}
+	&_right{
+		text-align: right
+	}
+	&_left{
+		text-align: left
+	}
+}
+
+
+a{
+	text-decoration: none;
+	color: $mainColor;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+
+
+img{
+	max-width: 100%;
+	margin: 0;
+}
+
+.uppercase{
+	text-transform: uppercase
+}
+
+
+
+body{
+	background: $white;
+	color: $textColor;
+	&.no-scroll{
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+body, input, textarea, button{
+	outline: none;
+	font-family: $Circe;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-o-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+
+@import "blocks/typography/typography.scss";
+@import "blocks/ui/ui.scss";
+@import "blocks/header/header.scss";
+@import "blocks/banner/banner.scss";
+@import "blocks/social/social.scss";
+@import "blocks/offers/offers.scss";
+@import "blocks/advantages/advantages.scss";
+@import "blocks/characteristics/characteristics.scss";
+@import "blocks/about-defence/about-defence.scss";
+@import "blocks/about-page/about-page.scss";
+@import "blocks/products/products.scss";
+@import "blocks/work/work.scss";
+@import "blocks/price/price.scss";
+@import "blocks/video/video.scss";
+@import "blocks/about/about.scss";
+@import "blocks/small-title/small-title.scss";
+@import "blocks/services/services.scss";
+@import "blocks/order/order.scss";
+@import "blocks/partners/partners.scss";
+@import "blocks/contacts/contacts.scss";
+@import "blocks/modal/modal.scss";
+@import "blocks/breadcrumbs/breadcrumbs.scss";
+@import "blocks/how-to/how-to.scss";
+@import "blocks/expluatation/expluatation.scss";
+@import "blocks/important-tag/important-tag.scss";
+@import "blocks/problems/problems.scss";
+@import "blocks/about-product/about-product.scss";
+@import "blocks/product-content/product-content.scss";
+@import "blocks/docs/docs.scss";
+@import "blocks/tuning-illustration/tuning-illustration.scss";
+@import "blocks/chrome-illustration/chrome-illustration.scss";
+@import "blocks/technologies/technologies.scss";
+@import "blocks/contacts-form/contacts-form.scss";
+@import "blocks/footer/footer.scss";
+@import "blocks/modal/modal.scss";

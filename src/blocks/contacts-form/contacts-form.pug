@@ -1,0 +1,16 @@
+section(class="contacts-form")
+	div(class="contacts-form__wrapper")
+		div(class="contacts-form__cotnent")
+			form(class="contacts-form__form")
+				h2.h3 Оставьте заявку, для сотрудничества
+				input(type="text" name="name" placeholder="Ваше имя" required)
+				input(type="tel" name="tel" placeholder="Телефон")
+				input(type="email" name="email" placeholder="E-mail")
+
+				label(class="check")
+					input(class="check__input" type="checkbox" name="ofer" checked required)
+					span(class="check__box")
+					span(class="check__text") Я согласен на обработку персональных данных
+				
+				div(class="contacts-form__btn-block text_center")
+					button(type="submit" class="btn btn_center") Отправить

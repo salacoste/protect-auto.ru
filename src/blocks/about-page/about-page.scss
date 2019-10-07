@@ -1,0 +1,27 @@
+.about-page{
+	background: $white;
+	color: $white;
+	padding: 1px 0 20px;
+}
+
+.about-page__wrapper{
+	width: 1170px;
+	max-width: calc(100% - 40px);
+	margin: 0 auto;
+}
+
+.about-page__content{
+	background: $dark;
+	padding: 40px 20px 30px;
+	border-radius: 30px;
+	margin-top: -60px;
+}
+
+@media screen and (min-width: 768px){
+	.about-page__content{
+		background: $dark;
+		padding: 60px 100px 80px;
+		border-radius: 30px;
+		margin-top: -60px;
+	}
+}

@@ -1,0 +1,189 @@
+.offers{
+	padding: 0 0 20px;
+	background: $lightGray;
+	&_bottom-padding{
+		padding-bottom: 90px;
+	}
+}
+
+.offers__wrapper{
+	padding: 1px 0;
+}
+.offers__content{
+	margin: -60px auto 0;
+	max-width: calc(100% - 40px);
+	width: 1170px;
+	position: relative;
+}
+
+.offers__item{
+	background: $mainColor;
+	border-radius: 20px;
+	margin: 0 0 20px;
+	padding: 20px 30px;
+	padding-bottom: 240px / (280px / 100%);
+	position: relative;
+	color: $white;
+	overflow: hidden;
+	&_tuning{
+		width: 100%;
+		min-height: 400px;
+		.offers__item-img{
+			width: 100%;
+		}
+	}
+	&_no-img{
+		padding-bottom: 20px;
+	}
+}
+
+
+.offers__slider{
+	// position: relative;
+	margin-bottom: 64px;
+	width: 260px;
+	.owl-nav{
+		display: none;
+	}
+	.owl-dots{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		margin-top: 32px;
+		justify-content: center;
+		display: flex;
+		.owl-dot{
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: $dark;
+			margin: 0 11px;
+			transition: all .2s ease-in;
+			&.active{
+				transform: scale(1.9);
+				background: $mainColor;
+			}
+		}
+	}
+}
+
+
+.offers__item-img{
+	position: absolute;
+	bottom: 0;
+	width: 80%;
+	min-height: 1px;
+	&_left{
+		left: 0;
+	}
+	&_right{
+		right: 0;
+	}
+}
+
+.offers__item-title{
+	font-size: 24px;
+	line-height: 26px;
+	font-weight: 700;
+	margin: 0 0 25px;
+}
+
+.offers__item-description{
+	font-size: 18px;
+	line-height: 20px;
+}
+
+
+
+@media screen and (min-width: 620px){
+
+	.offers__content{
+		display: flex;
+		justify-content: space-between;
+		&_tuning{
+			display: block;
+		}
+	}
+
+	.offers__item{
+		width: calc(50% - 10px);
+		padding-bottom: 120px / (280px / 100%);
+		&_tuning{
+			width: auto;
+			min-height: auto;
+			padding-bottom: 300px / (370px / 100%);
+			.offers__item-cotnent{
+				min-height: 180px;
+			}
+		}
+		&_no-img{
+			padding-bottom: 20px;
+		}
+	}
+
+
+	.offers__slider{
+		width: auto;
+	}
+
+}
+
+
+
+@media screen and (min-width: 1024px){
+	.offers__slider{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	
+	.offers__item{
+		&_tuning{
+			width: auto;
+			min-height: auto;
+			padding-bottom: 300px / (1170px / 100%);
+			width: calc(33.33333% - 16px);
+		}
+		
+	}
+
+}
+@media screen and (min-width: 1200px){
+	.offers__item{
+		width: calc(50% - 15px);
+		padding-left: 110px;
+		padding-right: 90px;
+		padding-top: 40px;
+		&_tuning{
+			width: auto;
+			min-height: auto;
+			padding-bottom: 300px / (1170px / 100%);
+			width: calc(33.33333% - 16px);
+			padding-left: 32px;
+			padding-right: 32px;
+			.offers__item-title{
+				font-size: 30px;
+				line-height: 38px;
+			}
+		}
+		&_no-img{
+			padding-bottom: 80px;
+		}
+	}
+
+
+	.offers__item-title{
+		font-size: 42px;
+		line-height: 44px;
+		margin-bottom: 30px;
+	}
+
+	.offers__item-description{
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+
+}

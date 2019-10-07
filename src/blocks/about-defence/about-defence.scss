@@ -1,0 +1,152 @@
+.about-defence{
+	background: $dark;
+	color: $white;
+	margin-top: -60px;
+	padding: 120px 0 90px;
+	&:before{
+		content: "";
+		display: block;
+		margin: 0 auto 20px;
+		width: 6px;
+		height: 36px;
+		background: #5478E9;
+		border-radius: 3px;
+		transform: rotate(32deg);
+	}
+}
+
+
+.about-defence__wrapper{
+	max-width: calc(100% - 40px);
+	margin: 0 auto;
+	width: 1170px;
+}
+
+
+.about-defence__title{
+	font-size: 36px;
+	line-height: 38px;
+}
+
+
+.about-defence__info{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column-reverse;
+	margin-bottom: 60px;
+}
+
+.about-defence__car{
+	width: calc(100% + 20px);
+	margin-right: -20px;
+	margin-bottom: 30px;
+	height: 320px;
+	overflow: hidden;
+	img{
+		height: 100%;
+		width: auto;
+		max-width: none;
+	}
+}
+
+
+.about-defence__text{
+	background: $gray;
+	padding: 30px 20px 20px;
+	border-radius: 30px;
+	width: 100%;
+	max-width: 320px;
+}
+
+
+.about-defence__img{
+	height: 660px + 26px;
+	width: calc(100% + 40px);
+	margin: 0 -20px;
+	padding: 0 20px;
+	overflow: auto;
+	position: relative;
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 52px;
+		height: 52px;
+		left: 42px;
+		bottom: 0;
+		background: url("../i/finger.svg") no-repeat center center;
+		background-size: 100% 100%;
+	}
+	img{
+		height: calc( 100% - 26px);
+		width: auto;
+		max-width: none;
+		display: block;
+		margin-right: 20px;
+	}
+}
+
+@media screen and (min-width: 768px){
+
+	.about-defence__info{
+		flex-direction: row;
+		justify-content: center;
+		margin: 0 -20px 60px 0;
+	}
+
+	.about-defence__text{
+		max-width: 270px;
+		width: auto;
+		padding: 60px 40px;
+		// p{
+		// 	font-size: 24px;
+		// 	line-height: 28px;
+		// }
+	}
+
+
+	.about-defence__car{
+		width: calc(100% - 310px);
+		margin: 0 0 0 40px;
+		max-width: 562px;
+	}
+}
+
+
+@media screen and (min-width: 1190px){
+	.about-defence__img{
+		&::before{
+			display: none;
+		}
+	}
+}
+@media screen and (min-width: 1260px){
+
+	.about-defence__info{
+		margin: 0 0 60px 0;
+		justify-content: space-between;
+	}
+
+	.about-defence__text{
+		max-width: 370px;
+		p{
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+
+	.about-defence__car{
+		width: calc(100% - 410px);
+		max-width: calc(100% - 410px);
+
+		margin: 0 0 0 40px;
+		// max-width: auto;
+		height: 443px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+
+}

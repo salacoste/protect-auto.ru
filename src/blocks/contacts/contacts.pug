@@ -1,0 +1,66 @@
+section(class="contacts")
+	div(class="contacts__wrapper")
+		div(class="contacts__map" id="map")
+
+		label(class="contacts__map-toggle")
+			input(type="checkbox" class="contacts__map-toggle-input js-map-toggle")
+			div(class="contacts__map-toggle-wrapper")
+				div(class="contacts__map-toggle-text") Карта
+				div(class="contacts__map-toggle-text") Список
+
+		div(class="contacts__content")
+			address(class="contacts__info custom-scrollbar")
+
+				div(class="contacts__block active" id="marker1" data-key="marker1")
+					div(class="contacts__block-title") «Ptotect» Москва
+					div(class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="pin")
+						span(class="class__contacts__item-text") 109147. г. Москва. ул. Воронцовская. д. 35Б. корп. 1
+					a(href="tel:84957898580" class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="tel")
+						span(class="class__contacts__item-text") 8(495)789-85-80
+					a(href="mailto:service@artron.ru" class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="mail")
+						span(class="class__contacts__item-text") service@artron.ru
+
+					a(href="#" class="contacts__item-link") www.artron.ru
+
+				div(class="contacts__block" id="marker2" data-key="marker2")
+					div(class="contacts__block-title") «Protect» Санкт-Петербург
+					div(class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="pin")
+						span(class="class__contacts__item-text") 109147. г. Москва. ул. Воронцовская. д. 35Б. корп. 1
+					a(href="tel:84957898580" class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="tel")
+						span(class="class__contacts__item-text") 8(495)789-85-80
+					a(href="mailto:service@artron.ru" class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="mail")
+						span(class="class__contacts__item-text") service@artron.ru
+					a(href="#" class="contacts__item-link") www.artron.ru
+				div(class="contacts__block" id="marker3" data-key="marker3")
+					div(class="contacts__block-title") «Protect» Краснодар
+					div(class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="pin")
+						span(class="class__contacts__item-text") 109147. г. Москва. ул. Воронцовская. д. 35Б. корп. 1
+					a(href="tel:84957898580" class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="tel")
+						span(class="class__contacts__item-text") 8(495)789-85-80
+					a(href="mailto:service@artron.ru" class="contacts__item")
+						span(class="class__contacts__item-icon js-icon" data-icon="mail")
+						span(class="class__contacts__item-text") service@artron.ru
+					a(href="#" class="contacts__item-link") www.artron.ru
+
+
+				- for(i=0; i< 5; i++)
+					div(class="contacts__block")
+						div(class="contacts__block-title") «Protect» Краснодар
+						div(class="contacts__item")
+							span(class="class__contacts__item-icon js-icon" data-icon="pin")
+							span(class="class__contacts__item-text") 109147. г. Москва. ул. Воронцовская. д. 35Б. корп. 1
+						a(href="tel:84957898580" class="contacts__item")
+							span(class="class__contacts__item-icon js-icon" data-icon="tel")
+							span(class="class__contacts__item-text") 8(495)789-85-80
+						a(href="mailto:service@artron.ru" class="contacts__item")
+							span(class="class__contacts__item-icon js-icon" data-icon="mail")
+							span(class="class__contacts__item-text") service@artron.ru
+						a(href="#" class="contacts__item-link") www.artron.ru
