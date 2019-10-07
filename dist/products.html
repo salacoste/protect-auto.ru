@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCErTX_iskE57p73gfN-Zl7sXHEA9OwAdw"></script>
+		<script src="js/jquery.scrollbar.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/icons.js" async></script>
+		<script async src="js/lazyload.min.js"></script>
+		<script>window.lazyLoadOptions = { elements_selector: ".lazy" };</script>
+		<title>Protect</title>
+		<script>
+			var markers = {
+				marker1: {
+					position: [40.6700, -73.9400],
+					title: 'title',
+					id: "#marker1"
+				},
+				marker2: {
+					position: [40.800, -73.80],
+					title: 'title 2',
+					id: "#marker2"
+				},
+				marker3: {
+					position: [40.700, -73.7],
+					title: 'title 3',
+					id: "#marker3"
+				},
+			}
+			
+		</script>
+		<script>
+			{
+				"@context": "http://schema.org/",
+				"@type": "Organization",
+				"name": "National Public Radio",
+				"url": "http://npr.org",
+				"sponsor":
+				{
+					"@type": "Organization",
+					"name": "Protect",
+					"logo": "i/logo.svg", // поменять на правильный абсолютный
+					"telephone": "+79854691299",
+					"email": "examole@mail.ru", // ПОМЕНЯТЬ НА ПРАВИЛЬНЫЙ
+					"url": "http://www.example.com/"  // НАДО ПОМЕНЯТЬ НА НУЖНЫЙ
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<main>
+				<header class="header">
+					<div class="header__content center">
+						<button class="header__nav-button" type="button"><span></span><span></span><span></span></button><a class="header__logo" href="/"><img src="i/logo.svg" alt="protect логотип"></a>
+						<div class="header__nav-block">
+							<button class="header__close-nav" type="button"><span></span><span></span></button>
+							<nav class="header__nav">
+								<ul>
+									<li><span class="header__nav-submenu-button"><span>Продукты</span></span>
+										<ul>
+											<li><a href="/product-1.html"><span>Базовый слой</span></a></li>
+											<li><a href="/product-2.html"><span>Разбавитель базового слоя</span></a></li>
+											<li><a href="/product-3.html"><span>Финишный глянцевый слой</span></a></li>
+											<li><a href="/product-4.html"><span>Финишный матовый слой</span></a></li>
+											<li><a href="/product-5.html"><span>Разбавитель финишного матового слоя</span></a></li>
+											<li><a href="/product-6.html"><span>Разбавитель финишного глянцевого слоя</span></a></li>
+											<li><a href="/product-7.html"><span>Оптимайзер</span></a></li>
+										</ul>
+									</li>
+									<li><span class="header__nav-submenu-button"><span>Применение</span></span>
+										<ul>
+											<li><a href="/products.html"><span>Как работает Protect</span></a></li>
+											<li><a href="/defence.html"><span>Защита</span></a></li>
+											<li><a href="/tuning.html"><span>Тюнинг</span></a></li>
+											<li><a href="/chrome.html"><span>Модификация хрома</span></a></li>
+											<li><a href="/disc.html"><span>Диски</span></a></li>
+										</ul>
+									</li>
+									<li> <span class="header__nav-submenu-button"><span>Сотрудничество</span></span>
+										<ul>
+											<li><a href="/offer-1.html"><span>Предложение для дистрибьютеров</span></a></li>
+											<li><a href="/offer-1.html"><span>Решение для СТО</span></a></li>
+											<li><a href="/offer-1.html"><span>Решение для детейлинг-центра</span></a></li>
+											<li><a href="/offer-1.html"><span>Решение для диллерских автосалонов</span></a></li>
+										</ul>
+									</li>
+									<li><span class="header__nav-submenu-button"><span>О нас</span></span>
+										<ul>
+											<li><a href="/contacts.html"><span>Контакты</span></a></li>
+											<li><a href="#"><span>Дистрибьюторы</span></a></li>
+											<li><a href="#"><span>Авторизованные центры</span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<button class="header__nav-block-order" type="button">Оставить заявку</button>
+							<div class="header__nav-block-social">
+								<ul>
+									<li><a class="js-icon" href="#" target="_blank" data-icon="vk"></a></li>
+									<li><a class="js-icon" href="#" target="_blank" data-icon="facebook"></a></li>
+									<li><a class="js-icon" href="#" target="_blank" data-icon="instagram"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__social">
+							<ul>
+								<li><a class="js-icon" href="#" target="_blank" data-icon="whatsapp"></a></li>
+								<li><a class="js-icon" href="#" target="_blank" data-icon="phone"> </a></li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<section class="banner banner_products">
+					<div class="banner__wrapper">
+						<div class="banner__content banner__content_middle">
+							<div class="breadcrumbs">
+								<ol>
+									<li><a href="#">Главная</a></li>
+									<li><span>Защита</span></li>
+								</ol>
+							</div>
+							<h1 class="banner__title">Что такое жидкое<br> бронирование<br> Protect?</h1>
+						</div>
+						<div class="banner__social">
+							<ul class="social">
+								<li><a class="js-icon" href="#" data-icon="vk"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="facebook"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="instagram"> </a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="about-page">
+					<div class="about-page__wrapper">
+						<div class="about-page__content">
+							<p>Жидкое бронирование Protect – это снимаемое автомобильное покрытие, которое полностью заменяет полиуретановые прозрачные пленки (такие как SunTek, Hexis, Stek, Lumar и прочие), и защищает кузов автомобиля от сколов, царапин и реагентов.<br> Жидкое бронирование Protect наносится как краска и после высыхания образует абсолютно прозрачную глянцевую или матовую пленку на кузове автомобиля, которая имеет толщину более 200 микрон.</p>
+						</div>
+					</div>
+				</section>
+				<section class="products">
+					<div class="products__wrapper">
+						<div class="products__content">
+							<div class="products__header text_center">
+								<h2 class="products__title">Жидкое бронирование Protect состоит из нескольких компонентов, каждый из которых обеспечивает необходимые защитные свойства</h2>
+							</div>
+							<div class="products__items-wrapper">
+								<div class="products__items">
+									<div class="products__item"><a class="products__item-img" href="#"><img class="lazy" data-src="i/products/products/1.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Базовый слой</h3>
+												<p>Однокомпонентное покрытие с высоким сухим остатком, отличной адгезией ко всем материалам.</p>
+												<p>Толщина: 150-180 мкм</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"><img class="lazy" data-src="i/products/products/2.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Разбавитель базового слоя</h3>
+												<p>Позволяет корректировать вязкость  при нанесении базового слоя.</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"> <img class="lazy" data-src="i/products/products/3.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Оптимайзер</h3>
+												<p>Обеспечивает идеально ровную поверхность базового слоя, что позволяет финишному слою вид автомобильной краски</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn  btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"> <img class="lazy" data-src="i/products/products/3.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Оптимайзер</h3>
+												<p>Обеспечивает идеально ровную поверхность базового слоя, что позволяет финишному слою вид автомобильной краски</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn  btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"> <img class="lazy" data-src="i/products/products/4.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Оптимайзер</h3>
+												<p>Обеспечивает идеально ровную поверхность базового слоя, что позволяет финишному слою вид автомобильной краски</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn  btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"> <img class="lazy" data-src="i/products/products/5.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Оптимайзер</h3>
+												<p>Обеспечивает идеально ровную поверхность базового слоя, что позволяет финишному слою вид автомобильной краски</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn  btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"> <img class="lazy" data-src="i/products/products/5.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Оптимайзер</h3>
+												<p>Обеспечивает идеально ровную поверхность базового слоя, что позволяет финишному слою вид автомобильной краски</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn  btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"> <img class="lazy" data-src="i/products/products/1.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Оптимайзер</h3>
+												<p>Обеспечивает идеально ровную поверхность базового слоя, что позволяет финишному слою вид автомобильной краски</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn  btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+									<div class="products__item"><a class="products__item-img" href="#"> <img class="lazy" data-src="i/products/products/2.png" alt=""></a>
+										<div Class="products__item-content">
+											<div Class="products__item-text">
+												<h3>Оптимайзер</h3>
+												<p>Обеспечивает идеально ровную поверхность базового слоя, что позволяет финишному слою вид автомобильной краски</p>
+											</div>
+											<div class="products__item-button text_center"><a class="btn  btn_center btn_small" href="#">Подробнее</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="about-defence">
+					<div class="about-defence__wrapper">
+						<div class="about-defence__content">
+							<div class="about-defence__header text_center">
+								<h2 class="about-defence__title">Жидкое бронирование Protect защищает кузов автомобиля от всех физических и химических воздействий</h2>
+							</div>
+							<div class="about-defence__content">
+								<div class="about-defence__info">
+									<div class="about-defence__text">
+										<p>Protect защищает кузов автомобиля от сколов, царапин и мелких повреждений.После нанесения бронирования Protect автомобиль получает новый вид, а также гарантированную защиту кузова толщиной более 200 мкм.</p>
+									</div>
+									<div class="about-defence__car"><img class="lazy" data-src="i/about-defence/about-defence-car.svg" alt=""></div>
+								</div>
+								<div class="about-defence__img"><img class="lazy" data-src="i/about-defence/about-defence-img.svg" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="work">
+					<div class="work__wrapper">
+						<div class="work__content">
+							<h2 class="work__title text_center">Как работает жидкое бронирование</h2>
+							<p class="work__subtitle text_center">Protect состоит из трех слоев:</p>
+							<ol class="work__list">
+								<li class="work__item">
+									<div class="work__item-title-block">
+										<h3 class="work__item-title">Базовый слой</h3>
+										<p class="work__item-subtitle">(прозрачный или цветной) </p>
+									</div>
+									<p>обеспечивает толщину пленке, имеет абсолютную адгезию к любым материалам (металл, пластик, хром), защищает родное ЛКП автомобиля от повреждений.</p>
+								</li>
+								<li class="work__item">
+									<div class="work__item-title-block">
+										<h3 class="work__item-title">Слой оптимайзера</h3>
+									</div>
+									<p>функциональный компонент, который позволяет финишному слою иметь высокую растекаемость и в конечном итоге получить покрытие, которое выглядит неотличимо от автомобильной краски</p>
+								</li>
+								<li class="work__item">
+									<div class="work__item-title-block">
+										<h3 class="work__item-title">Финишный</h3>
+										<p class="work__item-subtitle">(матовый или глянцевый)</p>
+									</div>
+									<p>дает возможность полировать пленку, фильтрует УФ лучи, стоек к царапинам</p>
+								</li>
+							</ol>
+							<div class="work__illustration"><span></span><span></span><span></span></div>
+							<div class="work__about">
+								<div class="work__about-text">
+									<h3>Способ нанесения жидкого бронирования Protect позволяет залить уже имеющиеся царапины и сколы на кузове автомобиля глубиной до 75 мкм.</h3>
+									<p>Данное свойство позволяет восстановить  родное ЛКП автомобиля и устранить имеющиеся царапины на кузове.</p>
+								</div>
+								<div class="work__about-img-block">
+									<div class="work__about-img"><img class="lazy" data-src="i/expluatation/3.jpg" alt=""></div>
+								</div>
+							</div>
+							<div class="work__car-img"><img class="lazy" data-src="i/work-car.svg" alt=""></div>
+						</div>
+					</div>
+				</section>
+				<section class="characteristics">
+					<div class="characteristics__wrapper">
+						<div class="characteristics__content">
+							<h2 class="characteristics__title text_center">Технические характеристики Protect. Толщина и прочность жидкого бронирования</h2>
+							<div class="characteristics__table-block">
+								<div class="characteristics__table">
+									<table>
+										<thead>
+											<tr>
+												<th>Свойство</th>
+												<th>Тех. регламент</th>
+												<th>Результат</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Общая толщина бронирования</td>
+												<td>-</td>
+												<td>200-250 мкм</td>
+											</tr>
+											<tr>
+												<td>Адгезия покрытия</td>
+												<td>ASTM D3330</td>
+												<td>760 N/m</td>
+											</tr>
+											<tr>
+												<td>Коэф. удлинения</td>
+												<td>ASTM D638-10</td>
+												<td>430 %</td>
+											</tr>
+											<tr>
+												<td>Температурный режим</td>
+												<td> </td>
+												<td>119C</td>
+											</tr>
+											<tr>
+												<td>Устойчивость к протиранию</td>
+												<td>Тейбер тест</td>
+												<td>Покрытие стойкое</td>
+											</tr>
+											<tr>
+												<td>Химическая устойчивость</td>
+												<td>Изопропиловый спирт</td>
+												<td>Покрытие стойкое</td>
+											</tr>
+											<tr>
+												<td>Химическая устойчивость</td>
+												<td>Гексан</td>
+												<td>Покрытие стойкое</td>
+											</tr>
+											<tr>
+												<td>Устойчивсть к ультрафиолету</td>
+												<td>QUV 2500 часов</td>
+												<td>Тест пройден</td>
+											</tr>
+											<tr>
+												<td>Устойчивость к температуре</td>
+												<td>70С 2500 часов</td>
+												<td>Тест пройден</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="order">
+					<div class="order__title-block text_center">
+						<h2>Внедрить услугу в Ваш бизнес</h2>
+					</div>
+					<div class="order__wrapper">
+						<div class="order__img"><img class="lazy" data-src="i/order/1.jpg" alt="Оставьте заявку, для сотрудничества"></div>
+						<div class="order__content">
+							<form class="order__form ajax_form" method="post" action="">
+								<h3>Оставьте заявку, для сотрудничества</h3>
+								<input type="text" name="name" placeholder="Ваше имя" required>
+								<input type="tel" name="tel" placeholder="Телефон">
+								<input type="email" name="email" placeholder="E-mail">
+								<label class="check">
+									<input class="check__input" type="checkbox" name="ofer" required><span class="check__box"></span><span class="check__text">Я согласен на обработку персональных данных</span>
+								</label>
+								<div class="order__form-btn-block text_center">
+									<button class="btn btn_center" type="submit">Отправить</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__wrapper">
+					<div class="footer__content">
+						<div class="footer__about">
+							<div class="footer__logo"><img src="i/logo.svg" alt="protect - логотип"></div>
+							<div class="footer__contacts"><a class="footer__call-item js-icon" href="#" data-icon="whatsapp"></a><a class="footer__call-item js-icon" href="#" data-icon="phone"></a><a class="footer__tel" href="tel:+79854691299">8 (985) 469-12-99</a></div>
+						</div>
+						<div class="footer__nav">
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Продукты</div>
+								<ul>
+									<li><a href="#">База</a></li>
+									<li><a href="#">Лак</a></li>
+									<li><a href="#">Растворитель для базы</a></li>
+									<li><a href="#">Растворитель для лака</a></li>
+									<li><a href="#">Оптимайзер</a></li>
+								</ul>
+							</div>
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Применение</div>
+								<ul>
+									<li><a href="#">Как работает Protect</a></li>
+									<li><a href="#">Защита</a></li>
+									<li><a href="#">Тюнинг</a></li>
+									<li><a href="#">Модификация хрома</a></li>
+									<li><a href="#">Диски</a></li>
+								</ul>
+							</div>
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Сотрудничество</div>
+								<ul>
+									<li><a href="#">Предложение для дистрибьютеров</a></li>
+									<li><a href="#">Решение для СТО</a></li>
+									<li><a href="#">Решение для детейлинг-центра</a></li>
+									<li><a href="#">Решение для диллерских автосалонов</a></li>
+								</ul>
+							</div>
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Наши партнеры</div>
+								<ul>
+									<li><a href="#">Дистрибьюторы</a></li>
+									<li><a href="#">Авторизованные центры</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__social">
+							<ul class="social">
+								<li><a class="js-icon" href="#" data-icon="vk"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="facebook"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="instagram"> </a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="modal" id="video-modal">
+				<div class="modal__backing"></div>
+				<div class="modal__content modal__content_video">
+					<div class="modal__video"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
