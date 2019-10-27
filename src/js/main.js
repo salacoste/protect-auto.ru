@@ -62,7 +62,7 @@ $("document").ready(function(){
 	});
 
 
-	if( window.innerWidth < 1260 ){
+	if( window.innerWidth < 1230 ){
 		$('.js-advantages-slider').owlCarousel({
 			loop:false,
 
@@ -266,7 +266,8 @@ $("document").ready(function(){
 
 
 
-	
+	if($("div").is("#map")){
+		
 
 		// When the window has finished loading create our google map below
 		google.maps.event.addDomListener(window, 'load', init);
@@ -274,13 +275,19 @@ $("document").ready(function(){
 		function init() {
 			// Basic options for a simple Google Map
 			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+			if( window.innerWidth >= 768 ){
+				var centerTransform = -0.5;
+			}else{
+				var centerTransform = 0;
+			}
 			var mapOptions = {
 				// How zoomed in you want the map to start at (always required)
 				zoom: 9,
 				disableDefaultUI: true,
 
 				// The latitude and longitude to center the map (always required)
-				center: new google.maps.LatLng(40.6700, -73.9400), // New York
+				
+				center: new google.maps.LatLng(markers["marker1"].position[0], markers["marker1"].position[1] + centerTransform), // New York
 
 				// How you would like to style the map. 
 				// This is where you would paste any style found on Snazzy Maps.
@@ -319,18 +326,18 @@ $("document").ready(function(){
 
 						var pinIcon = new google.maps.MarkerImage(
 							'i/pin.svg',
-							new google.maps.Size(101,137), //size
+							new google.maps.Size(30,41), //size
 							null, //origin
 							null, //anchor
-							new google.maps.Size(101,137) //scale
+							new google.maps.Size(30,41) //scale
 						);
 					}else{
 						// var pinIcon = "i/pin_dark.svg";
 						// var size = new google.maps.Size(33, 45);
 						var pinIcon = {
 							url: "i/pin_dark.svg", // url
-							// size: new google.maps.Size(33, 45), // scaled size
-							scaledSize: new google.maps.Size(33, 45) // scaled size
+							size: new google.maps.Size(33, 45), // scaled size
+							scaledSize: new google.maps.Size(20, 27) // scaled size
 							// origin: new google.maps.Point(16,45), // origin
 						};
 					}
@@ -389,7 +396,15 @@ $("document").ready(function(){
 
 
 		$(".js-map-toggle").change(function(){
-			if( $(this).is(":checked") ){
+			mapToggle();
+		});
+
+	}
+
+
+	var mapToggle = function(){
+		if( window.innerWidth < 1200 ){
+			if( $(".js-map-toggle").is(":checked") ){
 				$(".contacts__map").fadeOut(200);
 				// $(".contacts__info").fadeIn(200);
 				$(".contacts__info").css("height", "calc(100vh - 120px)");
@@ -400,10 +415,30 @@ $("document").ready(function(){
 				$(".contacts__block:not(.active)").fadeOut(200);
 				$(".contacts__info").css("height", $(".contacts__block.active").outerHeight() + 10);
 			}
-		});
+		}
+
+	}
 
 
+	$( window ).resize(function() {
+		mapToggle();
+	});
 
+	mapToggle();
+
+	$(".js-contacts-scroll").click(function(e){
+		$("html, body").stop().animate({scrollTop: $(".contacts").offset().top}, 500);
+		$(".js-map-toggle").attr("checked", true);
+		mapToggle();
+		// $(".js-map-toggle").trigger(click);
+	});
+
+	$(".js-scroll-link").click(function(e){
+		e.preventDefault()
+		$(".header__nav-block").removeClass("active");
+		$("html, body").stop().animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
+		// $(".js-map-toggle").trigger(click);
+	});
 
 		$("body").on("click", ".js-tab-button", function(){
 			// $(".js-tab-button").click(function(){
@@ -434,4 +469,34 @@ $("document").ready(function(){
 				}
 			});
 
+
+			$(document).on('af_complete', function(event, response) {
+				// var form = response.form;
+				// // Если у формы определённый id
+				// if (form.attr('id') == 'my_form_3') {
+				//     // Скрываем её!
+				//     form.hide();
+				// }
+				// Иначе печатаем в консоль весь ответ
+				// else {
+			
+					// {success: true, message: "Форма успешно отправлена", data: Array(0), form: k.fn.init(1)}data: []form: k.fn.init [form#order__form.order__form.ajax-form.ajax_form]message: "Форма успешно отправлена"success: true__proto__: Object
+					if (response.success) {
+						// Скрываем форму и показываем блок!
+						// response.form.hide();
+						modalOpen("#success-modal");
+						// if (document.getElementsByClassName('g-recaptcha').length) grecaptcha.reset();
+						// $("#success-response").fadeIn(700);
+					} else {
+						for (var prop in response.data) {
+							// Выводим сообщение через jGrowl для всех полей с ошибками.
+							// Если хотите, чтобы сообщения оставались, добавьте вторым параметром true
+							AjaxForm.Message.error("Заполните поле '"+fields[prop]+"'");
+						}
+					}
+					response.message='';
+			});
+				// }
+			
 });
+

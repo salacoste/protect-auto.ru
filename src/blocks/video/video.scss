@@ -1,5 +1,5 @@
 .video{
-	padding: 15px 0;
+	// padding: 15px 0;
 	color: $white;
 	&_white{
 		color: $textColor;
@@ -80,6 +80,9 @@
 }
 
 @media screen and (min-width: 768px){
+	.video{
+		padding: 15px 0;
+	}
 
 	// .video{
 	// 	&_transform{

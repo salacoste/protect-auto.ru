@@ -1,5 +1,5 @@
 .banner{
-	background-image: url("../i/banner.jpg");
+	background-image: url("../i/main.jpg");
 	background-repeat:  no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -7,29 +7,41 @@
 	min-height: 568px;
 	padding: 1px 0;
 	&_defence{
-		background-image: url("../i/banner/defence.jpg");
+		background-image: url("../i/main/defence.jpg");
 	}
 	&_products{
-		background-image: url("../i/banner/products.jpg");
+		background-image: url("../i/main/products.jpg");
 	}
 	&_disc{
-		background-image: url("../i/banner/disc.jpg");
+		background-image: url("../i/main/disc.jpg");
 		background-position: right center;
 	}
 	&_tuning{
-		background-image: url("../i/banner/tuning.jpg");
+		background-image: url("../i/main/tuning.jpg");
 		background-position: center center;
 	}
 	&_chrome{
-		background-image: url("../i/banner/chrome.jpg");
+		background-image: url("../i/main/chrome.jpg");
 		background-position: center center;
 	}
 	&_contacts{
-		background-image: url("../i/banner/contact.png");
+		background-image: url("../i/main/contact.jpg");
+		background-position: center center;
+	}
+	&_offer-1{
+		background-image: url("../i/main/offer-1.jpg");
+		background-position: center center;
+	}
+	&_offer-2{
+		background-image: url("../i/main/offer-2.jpg");
+		background-position: center center;
+	}
+	&_offer-3{
+		background-image: url("../i/main/offer-3.jpg");
 		background-position: center center;
 	}
 	&_product{
-		background-image: url("../i/banner/product.jpg");
+		background-image: url("../i/main/product.jpg");
 		position: relative;
 		height: auto;
 		min-height: 700px;
@@ -209,35 +221,44 @@
 
 @media screen and (min-width: 768px){
 	.banner{
-		background-image: url("../i/banner-desctop.jpg");
+		background-image: url("../i/main-desctop.jpg");
 		background-size: cover;
 		// height: 790px;
 		height: 100vh;
 		min-height: 700px;
 		&_defence{
-			background-image: url("../i/banner/defence_desctop.jpg");
+			background-image: url("../i/main/defence_desctop.jpg");
 		}
 		&_products{
-			background-image: url("../i/banner/products_desctop.jpg");
+			background-image: url("../i/main/products_desctop.jpg");
 		}
 		&_disc{
-			background-image: url("../i/banner/disc_desctop.jpg");
+			background-image: url("../i/main/disc_desctop.jpg");
 			background-position: center center;
 		}
 		&_chrome{
-			background-image: url("../i/banner/chrome_desctop.jpg");
+			background-image: url("../i/main/chrome_desctop.jpg");
 
 		}
 		&_tuning{
-			background-image: url("../i/banner/tuning_desctop.jpg");
+			background-image: url("../i/main/tuning_desctop.jpg");
 		}
 		&_product{
-			background-image: url("../i/banner/product_desctop.jpg");
+			background-image: url("../i/main/product_desctop.jpg");
 			padding-bottom: 1px;
 		}
 		&_contacts{
-			background-image: url("../i/banner/contact.png");
+			background-image: url("../i/main/contact.jpg");
 			background-position: center center;
+		}
+		&_offer-1{
+			background-image: url("../i/main/offer-1_desctop.jpg");
+		}
+		&_offer-2{
+			background-image: url("../i/main/offer-2_desctop.jpg");
+		}
+		&_offer-3{
+			background-image: url("../i/main/offer-3_desctop.jpg");
 		}
 	}
 
@@ -278,13 +299,14 @@
 		margin: auto;
 		height: 230px;
 		display: block;
+		z-index: 1;
 	}
 
 	
 
 		
 }
-@media screen and (min-width: 1260px){
+@media screen and (min-width: 1230px){
 
 
 	.banner__tel{

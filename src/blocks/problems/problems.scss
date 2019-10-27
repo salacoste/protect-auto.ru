@@ -105,7 +105,7 @@
 
 
 .problems-step__item{
-	margin: 0 0 60px;
+	margin: 0 0 110px;
 	&_blue{
 		margin-left: -50px;
 		margin-right: -50px;
@@ -162,7 +162,7 @@
 			color: $textColor;
 			padding: 0;
 			position: static;
-			margin-bottom: 55px;
+			margin-bottom: 30px;
 			.problems-step__img{
 				margin: 0 -20px 0 0;
 			}
@@ -213,7 +213,7 @@
 
 
 
-@media screen and (min-width: 1260px){
+@media screen and (min-width: 1230px){
 	.problems__content{
 		margin: -60px 0 0;
 		padding: 60px 75px 50px;

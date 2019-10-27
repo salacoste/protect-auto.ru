@@ -4,10 +4,11 @@ input{
 	border-radius: 30px;
 	background: $white;
 	border: 1px solid $lightGray;
-	line-height: 58px;
-	padding: 0 25px;
+	line-height: 40px;
+	padding: 9px 25px;
 	font-size: 14px;
 	margin: 0 0 20px;
+	box-shadow: none;
 }
 
 .btn{
@@ -90,7 +91,7 @@ input{
 
 
 
-@media screen and (min-width: 1260px){
+@media screen and (min-width: 1230px){
 
 
 	.btn{

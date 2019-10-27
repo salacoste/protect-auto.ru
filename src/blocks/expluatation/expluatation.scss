@@ -15,6 +15,7 @@
 	}
 	&_no-transform{
 		margin-top: 0;
+		padding: 60px  0 25px;
 	}
 }
 
@@ -111,15 +112,15 @@
 
 
 
-@media screen and (min-width: 1260px){
+@media screen and (min-width: 1230px){
 	.expluatation__item{
 		max-width: 100%;
 	}
 	.expluatation{
-		padding-bottom: 400px - 35px;
+		padding-bottom: 120px;
 
 		&_no-transform{
-			padding-bottom: 120px;
+			padding-bottom: 25px;
 		}
 	}
 
