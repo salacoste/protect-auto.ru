@@ -415,6 +415,11 @@ $("document").ready(function(){
 				$(".contacts__block:not(.active)").fadeOut(200);
 				$(".contacts__info").css("height", $(".contacts__block.active").outerHeight() + 10);
 			}
+		}else{
+			$(".js-map-toggle").attr("checked", true);
+			$(".contacts__map").fadeIn(200);
+			$(".contacts__info").css("height", "calc(100vh - 120px)");
+			$(".contacts__block").fadeIn(200);
 		}
 
 	}
@@ -437,6 +442,13 @@ $("document").ready(function(){
 		e.preventDefault()
 		$(".header__nav-block").removeClass("active");
 		$("html, body").stop().animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
+		// $(".js-map-toggle").trigger(click);
+	});
+
+	$(".js-order-button").click(function(e){
+		e.preventDefault()
+		$(".header__nav-block").removeClass("active");
+		$("html, body").stop().animate({scrollTop: $("#order").offset().top}, 500);
 		// $(".js-map-toggle").trigger(click);
 	});
 

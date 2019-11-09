@@ -6,8 +6,6 @@ var gulp = require("gulp"),
 	uglify = require("gulp-uglify"),
 	// connect = require("gulp-connect");
 	browserSync  = require('browser-sync');
-var sourcemaps = require('gulp-sourcemaps');
-
 
 	sass.compiler = require("node-sass");
 
@@ -43,10 +41,8 @@ gulp.task("pug", function () {
 
 gulp.task("sass", function () {
 	return gulp.src('src/*.scss')
-		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sass({outputStyle: 'compressed'}))
-		.pipe(sourcemaps.write('../maps'))
 		.pipe(gulp.dest('./dist/css'))
 		.pipe(browserSync.reload({ stream: true }))
 		// .pipe(connect.reload());
