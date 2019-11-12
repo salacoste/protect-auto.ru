@@ -1,0 +1,163 @@
+.header {
+  min-height: 60px;
+}
+
+.header__logo1 {
+  display: inline-block;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  height: 100%;
+  float: right;
+  margin-right: 30px;
+
+  &::before {
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+}
+
+.header-nav {
+  display: inline-block;
+  min-height: 60px;
+  text-align: center;
+
+  &__link {
+    display: inline-block;
+    padding: 20px;
+    vertical-align: middle;
+
+  }
+}
+
+.header-nav, .header__logo1 {
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.bg {
+  margin-top: 60px;
+  min-height: 500px;
+  background-image: url('../i/video.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    background-image: url('../i/logo.svg');
+    position: absolute;
+    top: 81px;
+    right: 28px;
+    width: 160px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+
+  & h1 {
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    color: white;
+  }
+
+}
+
+
+.offers {
+  width: 100%;
+  display: inline-block;
+  background: #363745;
+  // min-height: 600px;
+
+  ul {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    vertical-align: top;
+  }
+
+  li {
+    display: inline-block;
+    width: calc(30%);
+    background: lighten($color: #363745, $amount: 10%);
+    color: #FFF;
+    padding: 10px 0 80px;
+    margin: 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+  }
+
+  & .offers__header {
+    font-weight: bold;
+    margin-top: 10px;
+    // font-size: px;
+    padding-bottom: 10px;
+
+  }
+
+  & .offers__text {
+    
+    display: block;
+    min-height: 60px;
+    margin: 10px;
+  }
+
+  & button {
+    border: none;
+    border-radius: 5px;
+    padding:10px;
+    font-size: 14px;
+    color: red;
+    background-color: white;
+    width: 80%;
+    box-shadow: 1px -1px 6px 2px rgba(0,0,0,0.5);
+    border: 1px solid white;
+    cursor: pointer;
+    margin-top: 20px;
+
+    &:hover, &:active {
+      background-color: darken($color: white, $amount: 30%);
+      color: black;
+      box-shadow: 2px -2px 22px 2px rgba(0,0,0, 0.5);
+      border: 1px solid darken($color: white, $amount: 30%);
+
+    }
+    &:focus {
+      border: 1px solid black;
+      box-shadow: none;
+      outline: none;
+    }
+
+  }
+
+}
+.video {
+  min-height: 400px;
+  // background: lighten($color: #363745, $amount: 20%);
+  // background-image: url('../i/main-desctop.jpg');
+  // background-position: top;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: #FFF;
+
+  & .video__wrapper_my {
+    position: relative;
+    min-height: 600px;
+  }
+}
+
+
