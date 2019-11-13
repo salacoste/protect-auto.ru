@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCErTX_iskE57p73gfN-Zl7sXHEA9OwAdw"></script>
+		<script src="js/jquery.scrollbar.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/icons.js" async></script>
+		<script async src="js/lazyload.min.js"></script>
+		<script>window.lazyLoadOptions = { elements_selector: ".lazy" };</script>
+		<title>Protect</title>
+		<script>
+			var markers = {
+				marker1: {
+					position: [40.6700, -73.9400],
+					title: 'title',
+					id: "#marker1"
+				},
+				marker2: {
+					position: [40.800, -73.80],
+					title: 'title 2',
+					id: "#marker2"
+				},
+				marker3: {
+					position: [40.700, -73.7],
+					title: 'title 3',
+					id: "#marker3"
+				},
+			}
+			
+		</script>
+		<script>
+			{
+				"@context": "http://schema.org/",
+				"@type": "Organization",
+				"name": "National Public Radio",
+				"url": "http://npr.org",
+				"sponsor":
+				{
+					"@type": "Organization",
+					"name": "Protect",
+					"logo": "i/logo.svg", // поменять на правильный абсолютный
+					"telephone": "+79854691299",
+					"email": "examole@mail.ru", // ПОМЕНЯТЬ НА ПРАВИЛЬНЫЙ
+					"url": "http://www.example.com/"  // НАДО ПОМЕНЯТЬ НА НУЖНЫЙ
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<main>
+				<div class="header">
+					<ul class="header-nav">
+						<li class="header-nav__link"> <a href="#">Меню один</a></li>
+						<li class="header-nav__link active"><a href="#">Меню два</a></li>
+						<li class="header-nav__link"><a href="#">Меню три</a></li>
+					</ul>
+					<div class="header__logo1"> <a href="#">Site Logo</a></div>
+				</div>
+				<div class="bg">
+					<h1>Главный заголовок</h1>
+				</div>
+				<section class="offers">
+					<ul>
+						<li>
+							<h4 class="offers__header">Заголовок 1</h4>
+							<div class="offers__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic corrupti vitae sit alias, tenetur numquam fuga. Fugit accusantium excepturi placeat, dolore nulla consequuntur. Error ea, eius maiores dolore quos delectus.</div>
+						</li>
+						<li>
+							<h4 class="offers__header">Заголовок 2</h4>
+							<div class="offers__text">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+							<button>Order</button>
+						</li>
+						<li>
+							<h4 class="offers__header">Заголовок 3</h4>
+							<div class="offers__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta debitis cumque officiis quam facilis repudiandae vel, minima voluptas, quibusdam ex vero, praesentium nisi nobis recusandae temporibus labore corrupti quidem nam?</div>
+						</li>
+					</ul>
+				</section>
+				<section class="video">
+					<div class="video__wrapper_my">
+						<h3>Как это работает</h3>
+						<p class="video__description">Lorem ipsum dolor sit.</p>
+						<ol class="video__list">
+							<li class="video__list-item">
+								<h3 class="video__list-header">Первый слой</h3>
+								<p class="video__list-description">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+							</li>
+							<li class="video__list-item">
+								<h3 class="video__list-header">Второй слой</h3>
+								<p class="video__list-description">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+							</li>
+							<li class="video__list-item">
+								<h3 class="video__list-header">Третий слой</h3>
+								<p class="video__list-description">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+							</li>
+						</ol>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
