@@ -5,9 +5,17 @@ var gulp = require("gulp"),
 	sass = require("gulp-sass"),
 	uglify = require("gulp-uglify"),
 	// connect = require("gulp-connect");
-	browserSync  = require('browser-sync');
+	browserSync  = require('browser-sync'),
+	autoprefixer = require('gulp-autoprefixer'),
+	del = require('del'),
+	sourcemaps = require('gulp-sourcemaps');
 
-	sass.compiler = require("node-sass");
+// Configuration DEV or PROD server
+var config = {
+	PROD: true,
+}
+
+	sass.compiler = require("node-sass"),
 
 // gulp.task("connect", function () {
 // 	connect.server({
@@ -40,12 +48,35 @@ gulp.task("pug", function () {
 
 
 gulp.task("sass", function () {
-	return gulp.src('src/*.scss')
+	let stream = gulp.src('src/*.scss')
+
+	if (!config.PROD) {
+		stream = stream
+		.pipe(sourcemaps.init())
+	}
+		stream = stream
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sass({outputStyle: 'compressed'}))
+
+
+		if (config.PROD) {
+			stream = stream
+			.pipe(autoprefixer(['last 4 versions'], { cascade: false }))
+			console.log('WARNING: PROD configuration is enables in gulp.js. Autoprefixer is working, SCSS SourceMap is disabled.')
+		}
+		else {
+			stream = stream
+			.pipe(sourcemaps.write('.'))
+
+		}
+
+		stream = stream
 		.pipe(gulp.dest('./dist/css'))
 		.pipe(browserSync.reload({ stream: true }))
 		// .pipe(connect.reload());
+		// .pipe(notify('scss converted to css'))
+		
+		return stream
 });
 
 
@@ -66,3 +97,8 @@ gulp.task("watch", function () {
 
 
 gulp.task("default", gulp.parallel("pug", "sass", "compress", "browser-sync", "watch") );
+
+
+gulp.task('clean:dist', function() {
+	return del.sync('dist');
+  })
