@@ -12,7 +12,7 @@ var gulp = require("gulp"),
 
 // Configuration DEV or PROD server
 var config = {
-	PROD: true,
+	PROD: false,
 }
 
 	sass.compiler = require("node-sass"),
@@ -28,7 +28,9 @@ var config = {
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
-			baseDir: 'dist'
+			baseDir: './dist/',
+			// index: 'index.html',
+
 		},
 		notify: false,
 		// online: false, // Work offline without internet connection
