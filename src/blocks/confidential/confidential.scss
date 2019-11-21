@@ -1,0 +1,36 @@
+.text-section{
+	background: $gray;
+    padding-bottom: 60px;
+    
+    &__wrapper{
+        max-width: calc(100% - 40px);
+        width: 1170px;
+        padding: 1px 0;
+        margin: 0 auto;
+    
+    }
+    &__content{
+        margin-top: -60px;
+    }
+
+    &__main{
+        background: $lightGray;
+        padding: 30px;
+        border-radius: 30px;
+        // max-width: 830px;
+    }
+    &__btn-block{
+        padding-top: 15px;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+	.text-section__main{
+		padding: 56px 110px;
+	}
+
+	.text-section__btn-block{
+		max-width: 270px;
+	}
+}

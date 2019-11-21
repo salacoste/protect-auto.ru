@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCErTX_iskE57p73gfN-Zl7sXHEA9OwAdw"></script>
+		<script src="js/jquery.scrollbar.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/icons.js" async></script>
+		<script async src="js/lazyload.min.js"></script>
+		<script>window.lazyLoadOptions = { elements_selector: ".lazy" };</script>
+		<title>Protect</title>
+		<script>
+			var markers = {
+				marker1: {
+					position: [40.6700, -73.9400],
+					title: 'title',
+					id: "#marker1"
+				},
+				marker2: {
+					position: [40.800, -73.80],
+					title: 'title 2',
+					id: "#marker2"
+				},
+				marker3: {
+					position: [40.700, -73.7],
+					title: 'title 3',
+					id: "#marker3"
+				},
+			}
+			
+		</script>
+		<script>
+			{
+				"@context": "http://schema.org/",
+				"@type": "Organization",
+				"name": "National Public Radio",
+				"url": "http://npr.org",
+				"sponsor":
+				{
+					"@type": "Organization",
+					"name": "Protect",
+					"logo": "i/logo.svg", // поменять на правильный абсолютный
+					"telephone": "+79854691299",
+					"email": "examole@mail.ru", // ПОМЕНЯТЬ НА ПРАВИЛЬНЫЙ
+					"url": "http://www.example.com/"  // НАДО ПОМЕНЯТЬ НА НУЖНЫЙ
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<main>
+				<header class="header">
+					<div class="header__content center">
+						<button class="header__nav-button" type="button"><span></span><span></span><span></span></button><a class="header__logo" href="/"><img src="i/logo.svg" alt="protect логотип"></a>
+						<div class="header__nav-block">
+							<button class="header__close-nav" type="button"><span></span><span></span></button>
+							<nav class="header__nav">
+								<ul>
+									<li><span class="header__nav-submenu-button"><span>Продукты</span></span>
+										<ul>
+											<li><a href="/product-1.html"><span>Базовый слой</span></a></li>
+											<li><a href="/product-2.html"><span>Разбавитель базового слоя</span></a></li>
+											<li><a href="/product-3.html"><span>Финишный глянцевый слой</span></a></li>
+											<li><a href="/product-4.html"><span>Финишный матовый слой</span></a></li>
+											<li><a href="/product-5.html"><span>Разбавитель финишного матового слоя</span></a></li>
+											<li><a href="/product-6.html"><span>Разбавитель финишного глянцевого слоя</span></a></li>
+											<li><a href="/product-7.html"><span>Оптимайзер</span></a></li>
+										</ul>
+									</li>
+									<li><span class="header__nav-submenu-button"><span>Применение</span></span>
+										<ul>
+											<li><a href="/products.html"><span>Как работает Protect</span></a></li>
+											<li><a href="/defence.html"><span>Защита</span></a></li>
+											<li><a href="/tuning.html"><span>Тюнинг</span></a></li>
+											<li><a href="/chrome.html"><span>Модификация хрома</span></a></li>
+											<li><a href="/disc.html"><span>Диски</span></a></li>
+										</ul>
+									</li>
+									<li> <span class="header__nav-submenu-button"><span>Сотрудничество</span></span>
+										<ul>
+											<li><a href="/offer-1.html"><span>Предложение для дистрибьютеров</span></a></li>
+											<li><a href="/offer-1.html"><span>Решение для СТО</span></a></li>
+											<li><a href="/offer-1.html"><span>Решение для детейлинг-центра</span></a></li>
+											<li><a href="/offer-1.html"><span>Решение для диллерских автосалонов</span></a></li>
+										</ul>
+									</li>
+									<li><span class="header__nav-submenu-button"><span>О нас</span></span>
+										<ul>
+											<li><a href="/contacts.html"><span>Контакты</span></a></li>
+											<li><a href="#"><span>Дистрибьюторы</span></a></li>
+											<li><a href="#"><span>Авторизованные центры</span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<button class="header__nav-block-order" type="button">Оставить заявку</button>
+							<div class="header__nav-block-social">
+								<ul>
+									<li><a class="js-icon" href="#" target="_blank" data-icon="vk"></a></li>
+									<li><a class="js-icon" href="#" target="_blank" data-icon="facebook"></a></li>
+									<li><a class="js-icon" href="#" target="_blank" data-icon="instagram"></a></li>
+								</ul>
+							</div><a class="header__nav-block-tel" href="tel:89854691299">8 (985) 469-12-99</a>
+						</div>
+						<div class="header__social">
+							<ul>
+								<li><a class="js-icon" href="#" target="_blank" data-icon="whatsapp"></a></li>
+								<li><a class="js-icon" href="#" target="_blank" data-icon="phone"> </a></li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<section class="banner banner_contacts">
+					<div class="banner__wrapper">
+						<div class="banner__content banner__content_middle">
+							<div class="breadcrumbs">
+								<ol>
+									<li><a href="#">Главная</a></li>
+									<li><span>Защита</span></li>
+								</ol>
+							</div>
+							<h1 class="h2">Свяжитесь с нами  удобным для вас способом<br> и мы ответим на Ваши вопросы</h1><a class="banner__tel" href="tel:+79854691299">
+								<div class="banner__tel-icon js-icon" data-icon="tel"></div>
+								<div class="banner__tel-phone">+7 (985) 469-12-99</div></a>
+						</div>
+						<div class="banner__social">
+							<ul class="social">
+								<li><a class="js-icon" href="#" data-icon="vk"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="facebook"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="instagram"> </a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<div class="text-section">
+					<div class="text-section__wrapper">
+						<div class="text-section__content">
+							<div class="text-section__main">
+								<h2 class="h3">Политика конфиденциальности сайта Protect-auto.ru</h2>
+								<p>Какие данные собираются на сайте, с какой целью и как эти данные используются и защищаются.</p>
+								<p>На сайте protect-auto.ru используются куки (Cookies) и данные о посетителях сервиса Google Analytics. Сбор информации в Analytics ведется анонимно. Собираются только обобщенные данные об эффективности рекламных кампаний, например, информация о конверсиях из рекламных источников, данные об общей посещаемости сайта.</p>
+								<p>При помощи этих данных так же собирается информация о действиях посетителей на сайте с целью улучшения его содержания, улучшения функциональных возможностей сайта и, как следствие, создания качественного контента и сервисов для посетителей. Так из отчетов Analytics определяется, заходил ли пользователь на сайт ранее, определяется источник перехода на сайт, время проведенное на сайте, количество просмотренных страниц и другие, обезличенные данные.</p>
+								<p>На сайте protect-auto.ru используется <a href="https://marketingplatform.google.com/about/" rel="noopener noreferrer nofollow" target="_blank">функция ремаркетинга Google Analytics. </a>Использование функции ремаркетинга в Google дает возможность повторного обращения к пользователям, которые заинтересовались услугами предлагаемыми на сайте во время своих предыдущих посещений. Например, посетили страницу сайта с коммерческим предложением, но не посетили страницу контакты или не обратились через форму обратной связи. Таким пользователям может быть сделано другое, более выгодное предложение посредством контекстной рекламы в AdWords на других ресурсах Контекстно-Медийной Сети (КМС) Google. Так же, благодаря технологиям Google, обращение может быть и к похожим на попавших в списки ремаркетинга аудиториям и к аудиториям с определенными интересами.</p>
+								<p>Вы можете в любой момент изменить настройки своего браузера так, чтобы браузер блокировал все файлы cookie или оповещал об отправке этих файлов.</p>
+								<p>
+									 Ознакомиться с <a href="https://policies.google.com/terms?hl=ru&amp;gl=ru" rel="noopener noreferrer nofollow" target="_blank">политикой конфиденциальности Google</a>.</p>
+								<p>Отключить или ограничить использование описанных выше служб:</p>
+								<ul>
+									<li> <a href="https://support.google.com/accounts/answer/32050?hl=ru" target="_blank" rel="noopener noreferrer nofollow">Очистить кеш и удалить файлы cookie</a></li>
+									<li><a href="https://support.google.com/accounts/answer/61416?hl=ru" target="_blank" rel="noopener noreferrer">Включить или отключить сохранение файлов cookie</a></li>
+									<li><a href="https://tools.google.com/dlpage/gaoptout/" target="_blank" rel="noopener noreferrer">Установить блокировщик Google Analytics</a></li>
+								</ul>
+								<p>Данная политика конфиденциальности применяется только к сайту protect-auto.ru</p>
+								<p>В случае изменения данной политики конфиденциальности вы сможете прочитать об этих изменениях на этой странице или, в особых случаях, получить уведомление на свой e-mail.</p>
+								<p>Для связи с администратором сайта используйте e-mail: sales@protect-auto.ru</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__wrapper">
+					<div class="footer__content">
+						<div class="footer__about">
+							<div class="footer__logo"><img src="i/logo.svg" alt="protect - логотип"></div>
+							<div class="footer__contacts"><a class="footer__call-item js-icon" href="#" data-icon="whatsapp"></a><a class="footer__call-item js-icon" href="#" data-icon="phone"></a><a class="footer__tel" href="tel:+79854691299">8 (985) 469-12-99</a></div>
+						</div>
+						<div class="footer__nav">
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Продукты</div>
+								<ul>
+									<li><a href="#">База</a></li>
+									<li><a href="#">Лак</a></li>
+									<li><a href="#">Растворитель для базы</a></li>
+									<li><a href="#">Растворитель для лака</a></li>
+									<li><a href="#">Оптимайзер</a></li>
+								</ul>
+							</div>
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Применение</div>
+								<ul>
+									<li><a href="#">Как работает Protect</a></li>
+									<li><a href="#">Защита</a></li>
+									<li><a href="#">Тюнинг</a></li>
+									<li><a href="#">Модификация хрома</a></li>
+									<li><a href="#">Диски</a></li>
+								</ul>
+							</div>
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Сотрудничество</div>
+								<ul>
+									<li><a href="#">Предложение для дистрибьютеров</a></li>
+									<li><a href="#">Решение для СТО</a></li>
+									<li><a href="#">Решение для детейлинг-центра</a></li>
+									<li><a href="#">Решение для диллерских автосалонов</a></li>
+								</ul>
+							</div>
+							<div class="footer__nav-column">
+								<div class="footer__nav-title">Наши партнеры</div>
+								<ul>
+									<li><a href="#">Дистрибьюторы</a></li>
+									<li><a href="#">Авторизованные центры</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__social">
+							<ul class="social">
+								<li><a class="js-icon" href="#" data-icon="vk"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="facebook"> </a></li>
+								<li><a class="js-icon" href="#" data-icon="instagram"> </a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="modal" id="video-modal">
+				<div class="modal__backing"></div>
+				<div class="modal__content modal__content_video">
+					<div class="modal__video"></div>
+				</div>
+			</div>
+			<div class="modal" id="success-modal">
+				<div class="modal__backing"></div>
+				<div class="modal__content">
+					<div class="h2">Форма успешно отправлена</div>
+					<div class="p">Спасибо за сообщение. В ближайшее время мы с Вами свяжемся</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
