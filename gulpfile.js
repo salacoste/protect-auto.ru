@@ -12,7 +12,7 @@ var gulp = require("gulp"),
 
 // Configuration DEV or PROD server
 var config = {
-	PROD: false,
+	PROD: true,
 }
 
 	sass.compiler = require("node-sass"),
