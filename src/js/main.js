@@ -11,6 +11,9 @@ $("document").ready(function(){
 	// 		$(this).toggleClass("active").next().slideToggle(200);
 	// 	}
 	// });
+
+	$('input[type="tel"]').mask("+7 (999) 999-99-99");
+
 	var menuTimeout;
 
 	$(".header__nav > ul > li").mouseenter(function(){
@@ -448,7 +451,7 @@ $("document").ready(function(){
 	$(".js-order-button").click(function(e){
 		e.preventDefault()
 		$(".header__nav-block").removeClass("active");
-		$("html, body").stop().animate({scrollTop: $("#order").offset().top}, 500);
+		$("html, body").stop().animate({scrollTop: $("#order").offset().top - $(".header").outerHeight()}, 500);
 		// $(".js-map-toggle").trigger(click);
 	});
 
@@ -483,7 +486,7 @@ $("document").ready(function(){
 
 
 			$(document).on('af_complete', function(event, response) {
-				// var form = response.form;
+				var form = response.form;
 				// // Если у формы определённый id
 				// if (form.attr('id') == 'my_form_3') {
 				//     // Скрываем её!
@@ -503,7 +506,7 @@ $("document").ready(function(){
 						for (var prop in response.data) {
 							// Выводим сообщение через jGrowl для всех полей с ошибками.
 							// Если хотите, чтобы сообщения оставались, добавьте вторым параметром true
-							AjaxForm.Message.error("Заполните поле '"+fields[prop]+"'");
+							AjaxForm.Message.error("Введите верные данные");
 						}
 					}
 					response.message='';

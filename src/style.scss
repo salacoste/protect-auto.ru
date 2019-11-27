@@ -1,7 +1,7 @@
 
 
 
-$Circe: "Circe","Roboto", "Open sans", sans-serif;
+$Circe: "Circe", "Roboto", "Open sans", sans-serif;
 
 
 $mainColor: #5478E9;
@@ -107,6 +107,35 @@ body, input, textarea, button{
 	-o-font-smoothing: antialiased;
 	-ms-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+}
+
+
+.jGrowl{
+	left: 10px!important;
+	width: calc(100% - 20px)!important;
+	top: 100px!important;
+	.jGrowl-notification{
+		width: 100%!important;
+		margin: 0 auto 20px!important;
+		opacity: 1;
+		.jGrowl-message{
+			font-size: 20px;
+			line-height: 1.5;
+			font-weight: 400;
+			font-family: $Circe;
+			padding-right: 50px;
+		}
+		.jGrowl-close{
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 30px;
+		}
+	}
+}
+
+.block-for-sb{
+	display: none;
 }
 
 
