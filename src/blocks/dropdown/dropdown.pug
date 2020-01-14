@@ -1,0 +1,21 @@
+mixin SelectBox(name, options)
+  .select-box
+    .select-box__current(tabindex="1")
+      each option, index in options
+        .select-box__value
+          input.select-box__input(type="radio" id=index value=option.value name=name checked)
+          p.select-box__input-text #{option.name}
+      img.select-box__icon(src="./i/dropdown_arrow.svg" alt="Arrow Icon" aria-hidden="true")
+    ul.select-box__list
+      each option, index in options
+        li
+          label.select-box__option(for=index aria-hidden) #{option.name}
+
+
+
++SelectBox('Paint Booth', [
+  {name: 'Выберите тип вашей малярной камеры', value: '0'}, 
+  {name: 'Самодельная малярная камера', value: '1'}, 
+  {name: 'Нет малярной камеры', value: '2'},
+  {name: 'Профессиональная малярная камера', value: '3'}
+  ])

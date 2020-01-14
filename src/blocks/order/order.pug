@@ -1,3 +1,4 @@
+
 section(class="order" id="order")
 	div(class="order__title-block text_center")
 		h2 Внедрить услугу в Ваш бизнес
@@ -10,7 +11,10 @@ section(class="order" id="order")
 				h3 Оставьте заявку, для сотрудничества
 				input(type="text" name="name" placeholder="Ваше имя" required)
 				input(type="tel" name="tel" placeholder="Телефон")
-				input(type="email" name="email" placeholder="E-mail")
+				input(type="email" name="email" placeholder="E-mail" required)
+				input(type="text" name="city" placeholder="Город" required)
+
+				include ../dropdown/dropdown
 
 				label(class="check")
 					input(class="check__input" type="checkbox" name="ofer" required)
