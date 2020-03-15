@@ -11,11 +11,24 @@ mixin SelectBox(name, options)
         li
           label.select-box__option(for=index aria-hidden) #{option.name}
 
+mixin updatedSelector(name, options)
+  .select_wrapper
+    select(name=name).select-box
+      option(value="0" selected disabled) Выберите тип вашей малярной камеры
 
+      each option, index in options
+        option(value=option.value) #{option.name}
 
-+SelectBox('Paint Booth', [
-  {name: 'Выберите тип вашей малярной камеры', value: '0'}, 
+//- +SelectBox('Paint Booth', [
+//-   {name: 'Выберите тип вашей малярной камеры', value: '0'}, 
+//-   {name: 'Самодельная малярная камера', value: '1'}, 
+//-   {name: 'Нет малярной камеры', value: '2'},
+//-   {name: 'Профессиональная малярная камера', value: '3'}
+//-   ])
+
++updatedSelector('Paint Booth', [
   {name: 'Самодельная малярная камера', value: '1'}, 
   {name: 'Нет малярной камеры', value: '2'},
-  {name: 'Профессиональная малярная камера', value: '3'}
+  {name: 'Профессиональная малярная камера', value: '3'},
+  {name: 'Хочу защитить собственный автомобиль', value: '4'}
   ])
